@@ -1,0 +1,164 @@
+/* ==========================================================================
+   DASHBOARD LAYOUT STYLES - MODERN EDITORIAL SAAS
+   ========================================================================== */
+
+.dashboard-layout-root {
+  min-height: 100vh;
+  display: flex;
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+}
+
+.dashboard-content-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 100vh;
+}
+
+.dash-top-header {
+  height: var(--nav-height);
+  background-color: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
+  position: sticky;
+  top: 0;
+  z-index: 90;
+}
+
+.dash-top-header-inner {
+  height: 100%;
+  padding: 0 var(--space-6);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dash-mobile-menu-btn {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  width: 36px;
+  height: 36px;
+  padding: 6px;
+  background-color: var(--color-surface-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
+
+.dash-menu-bar {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-text-primary);
+}
+
+.dash-top-brand-mobile {
+  display: none;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: var(--font-size-base);
+}
+
+.dash-top-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-left: auto;
+}
+
+.btn-dash-home {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+  background-color: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: color var(--transition-fast), border-color var(--transition-fast), background-color var(--transition-fast);
+}
+
+.btn-dash-home:hover,
+.btn-dash-home:focus-visible {
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+  background-color: var(--color-accent-subtle);
+  outline: none;
+}
+
+.btn-dash-home-short {
+  display: none;
+}
+
+.btn-dash-preview {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 12px;
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xs);
+  color: var(--color-accent);
+  background-color: var(--color-accent-subtle);
+  border: 1px solid rgba(49, 91, 234, 0.2);
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color var(--transition-fast);
+}
+
+.btn-dash-preview:hover {
+  background-color: rgba(49, 91, 234, 0.16);
+}
+
+.dashboard-view-wrapper {
+  flex: 1;
+}
+
+/* -------------------------------------------------------------------------
+   Responsive Breakdown
+   ------------------------------------------------------------------------- */
+@media (max-width: 900px) {
+  .dash-mobile-menu-btn {
+    display: flex;
+  }
+
+  .dash-top-brand-mobile {
+    display: block;
+  }
+
+  .dash-top-header-inner {
+    padding: 0 var(--space-4);
+  }
+}
+
+@media (max-width: 640px) {
+  .dash-top-brand-mobile {
+    display: none;
+  }
+
+  .dash-top-actions {
+    gap: var(--space-2);
+  }
+
+  .btn-dash-home-full {
+    display: none;
+  }
+
+  .btn-dash-home-short {
+    display: inline;
+  }
+
+  .btn-dash-home,
+  .btn-dash-preview {
+    padding: 5px 8px;
+    font-size: 0.7rem;
+  }
+}

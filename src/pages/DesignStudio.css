@@ -1,0 +1,536 @@
+/* ==========================================================================
+   DESIGN STUDIO WORKSPACE STYLES - MODERN EDITORIAL SAAS
+   ========================================================================== */
+
+.ds-container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+/* Top Toolbar */
+.ds-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  padding: var(--space-4) var(--space-5);
+  background-color: var(--color-surface-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.ds-toolbar-left {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.ds-kicker {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--color-accent);
+}
+
+.ds-title-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.ds-title {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.ds-unsaved-badge {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: var(--radius-sm);
+  background-color: #fef3c7;
+  color: #b45309;
+  border: 1px solid #fde68a;
+}
+
+.ds-toolbar-center {
+  display: inline-flex;
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 3px;
+  gap: 3px;
+}
+
+.ds-device-btn {
+  padding: 5px 12px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--color-text-secondary);
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.ds-device-btn--active {
+  background-color: var(--color-accent);
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+.ds-toolbar-right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.ds-btn-primary,
+.ds-btn-secondary,
+.ds-btn-danger {
+  padding: 0.55rem 1rem;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.ds-btn-primary {
+  background-color: var(--color-accent);
+  color: #FFFFFF;
+  border: 1px solid var(--color-accent);
+}
+
+.ds-btn-secondary {
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+  border: 1px solid var(--color-border);
+}
+
+.ds-btn-danger {
+  background-color: #ef4444;
+  color: #FFFFFF;
+  border: 1px solid #ef4444;
+}
+
+/* Split Studio Workspace */
+.ds-workspace {
+  display: grid;
+  grid-template-columns: 350px minmax(0, 1fr);
+  gap: var(--space-6);
+  align-items: start;
+}
+
+/* Left Panel */
+.ds-controls-panel {
+  background-color: var(--color-surface-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.ds-panel-tabs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-bottom: 1px solid var(--color-border);
+  background-color: var(--color-bg);
+}
+
+.ds-tab {
+  padding: 0.75rem 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+}
+
+.ds-tab--active {
+  color: var(--color-accent);
+  border-bottom-color: var(--color-accent);
+  background-color: var(--color-surface-secondary);
+}
+
+.ds-panel-body {
+  padding: var(--space-4);
+  max-height: calc(100vh - 220px);
+  overflow-y: auto;
+}
+
+/* Theme Cards */
+.ds-themes-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.ds-theme-card {
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.ds-theme-card--selected {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 1px var(--color-accent);
+}
+
+.theme-swatches {
+  display: flex;
+  gap: 6px;
+}
+
+.theme-swatch {
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.theme-card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.theme-card-name {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-base);
+  font-weight: 700;
+  margin: 0;
+}
+
+.theme-selected-pill {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #10b981;
+  background-color: #ecfdf5;
+  border: 1px solid #a7f3d0;
+  padding: 1px 6px;
+  border-radius: 3px;
+}
+
+.theme-card-desc {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+  margin: 0;
+  line-height: 1.45;
+}
+
+.btn-select-theme {
+  margin-top: 4px;
+  padding: 6px 10px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  background-color: var(--color-surface-secondary);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-select-theme--active {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  color: #FFFFFF;
+}
+
+/* Style & Layout Controls */
+.ds-style-controls,
+.ds-layout-controls {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.ds-control-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.ds-control-group:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.ds-group-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ds-group-title {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+.ds-link-reset {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--color-accent);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.ds-color-grid,
+.ds-select-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-3);
+}
+
+.ds-color-field,
+.ds-select-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ds-field-label {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.ds-color-input-wrap {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 6px;
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+}
+
+.ds-color-input-wrap input[type='color'] {
+  width: 24px;
+  height: 24px;
+  border: none;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.ds-color-hex {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--color-text-secondary);
+}
+
+.ds-select-field select {
+  padding: 6px 8px;
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  color: var(--color-text-primary);
+}
+
+.ds-helper-note {
+  font-size: 0.72rem;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+.ds-sections-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ds-section-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 10px;
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+}
+
+.ds-section-row--hidden {
+  opacity: 0.6;
+}
+
+.ds-section-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.ds-section-order-btns {
+  display: flex;
+  gap: 4px;
+}
+
+.ds-order-btn {
+  padding: 2px 6px;
+  border: 1px solid var(--color-border);
+  border-radius: 3px;
+  font-size: 0.75rem;
+  background-color: var(--color-surface-secondary);
+  cursor: pointer;
+}
+
+.ds-order-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+/* Central Preview Stage */
+.ds-preview-stage {
+  background-color: var(--color-surface-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.ds-preview-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 8px 14px;
+  border-bottom: 1px solid var(--color-border);
+  background-color: var(--color-bg);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--color-text-secondary);
+}
+
+.ds-preview-canvas {
+  padding: var(--space-4);
+  background-color: #dfddd4;
+  display: flex;
+  justify-content: center;
+  overflow-x: auto;
+  min-height: 620px;
+}
+
+.ds-preview-frame {
+  width: 100%;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+  transition: max-width 0.25s ease;
+}
+
+.ds-preview-frame--desktop {
+  max-width: 100%;
+}
+
+.ds-preview-frame--tablet {
+  max-width: 768px;
+}
+
+.ds-preview-frame--mobile {
+  max-width: 390px;
+}
+
+/* Reset Modal */
+.ds-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(23, 23, 23, 0.65);
+  backdrop-filter: blur(4px);
+  z-index: 1100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-4);
+}
+
+.ds-modal-dialog {
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  max-width: 460px;
+  width: 100%;
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.ds-modal-title {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-lg);
+  margin: 0;
+}
+
+.ds-modal-desc {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.ds-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-3);
+}
+
+@media (max-width: 1024px) {
+  .ds-workspace {
+    grid-template-columns: 1fr;
+  }
+
+  .ds-panel-body {
+    max-height: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .ds-container {
+    padding: var(--space-4);
+  }
+
+  .ds-color-grid,
+  .ds-select-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ds-preview-canvas {
+    padding: var(--space-2);
+  }
+}
